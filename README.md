@@ -1,9 +1,21 @@
 # Measuring-Statistical-Reproducibility-through-PPB-
 Evaluating the statistical reproducibility of RSS methods using parametric predictive bootstrapping
 
-set.seed(71)
-N=1000; mu=100; dt=10; bt=10; m=6 ; rho=0.40; v=m/2; v1=(m+2)/2;  sd=25
-Y=rnorm(N,mu,sd); e=rnorm(N,0,1); X=rho*Y+e*sqrt(1-(rho^2)); df=data.frame(Y,X); Yb=mean(Y); Xb=mean(X)
+set.seed(71);
+N=1000; 
+mu=100; 
+dt=10; 
+bt=10; 
+m=6 ; 
+rho=0.40; 
+v=m/2; 
+v1=(m+2)/2;  
+sd=25
+Y=rnorm(N,mu,sd); 
+e=rnorm(N,0,1); 
+X=rho*Y+e*sqrt(1-(rho^2)); 
+df=data.frame(Y,X); 
+Yb=mean(Y); Xb=mean(X)
 
 DIFF.rss=c(); DIFF.mrss=c(); DIFF.erss=c(); DIFF.prss=c(); Arss=c(); Amrss=c(); Aerss=c(); Aprss=c(); MRSS=c(); MMRSS=c(); MERSS=c(); MPRSS=c()
 
